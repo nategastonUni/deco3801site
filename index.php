@@ -62,9 +62,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check errors before sending to database
     if(empty($emailError) && empty($studentError) && empty($singerError) && empty($ageError)){
         //success
-        $success = "<p>Success!</p>";
+        $success = "<p>Form validation succcess</p>";
         //send to database
-        //...
+        //testing the steel thread connection for now
+        $servername = "localhost";
+        $username = "root";
+        $password = "c08a15fcaf53e799";
+        $dbname = "operapedia_website";
+
+        //create conncetion
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        //check connection
+        if (mysqli_connect_errno()) {
+            die("Connection failed: ". mysqli_connect_error());
+        }
+        //submit query
+        $insert = "INSERT INTO USER (email, student, singer, age_group) VALUES (?, ?, ?, ?)";
+        $stmt = mysqli_prepare($conn, $insert);
+        $stmt->bind_param("ssss", $email, $student, $singer, $age_group);
+        $stmt->execute();
+        $stmt->close();
+
+        //test a retrieve all
+        $select = "SELECT email, student, singer, age_group, submission_time from USER";
+        if ($result = mysqli_query($conn, $select)) {
+            while ($row = mysqli_fetch_row($result)) {
+                printf("%s, %s, %s, %s, %s\n", $row[0], $row[1], $row[2], $row[3], $row[4]);
+            }
+            $result->close();
+        }
+        mysqli_close($conn);
+        //$sql = "INSERT INTO `USER` (email, student, singer, age_group) VALUES ('" . $email . "', '" . $student . "', '" . $singer . "', '" . $age . "')";
     }
 }
 
