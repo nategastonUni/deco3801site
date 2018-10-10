@@ -206,7 +206,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if ($result->num_rows > 0) {
                         //output data of each row
                         while ($row = $result->fetch_assoc()) {
-                            $format = 'User: %s, Student: %s, Singer: %s, Age Group: %s, %Time: %s'
+                            $format = 'User: %s, Student: %s, Singer: %s, Age Group: %s, %Time: %s';
                             echo sprintf($format, $row[0], $row[1], $row[2], $row[3], $row[4]);
                         }
                     } else {
