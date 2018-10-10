@@ -82,9 +82,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO `USER` (email, student, singer, age_group) VALUES ('" . $email . "', '" . $student . "', '" . $singer . "', '" . $age . "')";
         if ($conn->query($sql) === TRUE) {
             // echo "Record created successfully";
-            $success = $success . " + record submitted"
+            $success = $success . " + record submitted";
         } else {
-            // echo "Error : " . $sql . "<br>" . $conn->error;
+            echo "Error : " . $sql . "<br>" . $conn->error;
         }
         
         // $insert = "INSERT INTO USER (email, student, singer, age_group) VALUES (?, ?, ?, ?)";
