@@ -1,5 +1,10 @@
 <?php
 
+$GLOBALS['servername'] = 'localhost';
+$GLOBALS['username'] = 'root';
+$GLOBALS['password'] = 'c08a15fcaf53e799';
+$GLOBALS['dbname'] = 'operapedia_website';
+
 function filterEmail($field){
     $candidateEmail = filter_var(trim($field), FILTER_SANITIZE_EMAIL);
     
@@ -62,42 +67,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check errors before sending to database
     if(empty($emailError) && empty($studentError) && empty($singerError) && empty($ageError)){
         //success
-        $success = "<p>Form validation succcess</p>";
+        $success = "<p>Form validated</p>";
         //send to database
         //testing the steel thread connection for now
-        $servername = "localhost";
-        $username = "root";
-        $password = "c08a15fcaf53e799";
-        $dbname = "operapedia_website";
+
 
         //create conncetion
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username']'', $GLOBALS['password'], $GLOBALS['dbname']);
         //check connection
         if ($conn->connect_error) {
             die("Connection failed: ". $conn->connect_error);
         }
         //submit query
-        // $sql = "INSERT INTO `USER` (email, student, singer, age_group) VALUES ('" . $email . "', '" . $student . "', '" . $singer . "', '" . $age . "')";
-        // if ($conn->query($sql) === TRUE) {
-        //     echo "Record created successfully";
-        // } else {
-        //     echo "Error : " . $sql . "<br>" . $conn->error;
-        // }
-        
-        $insert = "INSERT INTO USER (email, student, singer, age_group) VALUES (?, ?, ?, ?)";
-        $stmt = mysqli_prepare($conn, $insert);
-        $stmt->bind_param("ssss", $email, $student, $singer, $age_group);
-        $stmt->execute();
-        $stmt->close();
-
-        //test a retrieve all
-        $select = "SELECT email, student, singer, age_group, submission_time FROM USER";
-        if ($result = mysqli_query($conn, $select)) {
-            while ($row = mysqli_fetch_row($result)) {
-                printf("%s, %s, %s, %s, %s\n", $row[0], $row[1], $row[2], $row[3], $row[4]);
-            }
-            $result->close();
+        $sql = "INSERT INTO `USER` (email, student, singer, age_group) VALUES ('" . $email . "', '" . $student . "', '" . $singer . "', '" . $age . "')";
+        if ($conn->query($sql) === TRUE) {
+            // echo "Record created successfully";
+            $success = $success . " + record submitted"
+        } else {
+            // echo "Error : " . $sql . "<br>" . $conn->error;
         }
+        
+        // $insert = "INSERT INTO USER (email, student, singer, age_group) VALUES (?, ?, ?, ?)";
+        // $stmt = mysqli_prepare($conn, $insert);
+        // $stmt->bind_param("ssss", $email, $student, $singer, $age_group);
+        // $stmt->execute();
+        // $stmt->close();
+
+
         mysqli_close($conn);
     }
 }
@@ -194,6 +190,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="submit" name="submit" value="Register">
                     <span class="error"><?php echo $success;?></span>   
                 </p>
+                <p> 
+                <?php
+                    //test a retrieve all
+                    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username']'', $GLOBALS['password'], $GLOBALS['dbname']);
+                    //check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: ". $conn->connect_error);
+                    }
+
+                    //test a retrieve all
+                    $select = "SELECT email, student, singer, age_group, submission_time FROM USER";
+                    $result = $conn->query($select);
+
+                    if ($result->num_rows > 0) {
+                        //output data of each row
+                        while ($row = $result->fetch_assoc()) {
+                            $format = 'User: %s, Student: %s, Singer: %s, Age Group: %s, %Time: %s'
+                            echo sprintf($format, $row[0], $row[1], $row[2], $row[3], $row[4]);
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                    $conn->close();
+                ?>
 
             </form>
             
