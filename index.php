@@ -192,7 +192,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </p>
                 <p> 
                 <?php
-                    //test a retrieve all
+                    //test a retrieve all                    
+                    $GLOBALS['servername'] = 'localhost';
+                    $GLOBALS['username'] = 'root';
+                    $GLOBALS['password'] = 'c08a15fcaf53e799';
+                    $GLOBALS['dbname'] = 'operapedia_website';
                     $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbname']);
                     //check connection
                     if ($conn->connect_error) {
