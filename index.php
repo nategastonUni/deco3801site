@@ -71,28 +71,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $dbname = "operapedia_website";
 
         //create conncetion
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        $conn = new mysqli($servername, $username, $password, $dbname);
         //check connection
-        if (mysqli_connect_errno()) {
-            die("Connection failed: ". mysqli_connect_error());
+        if ($conn->connect_error) {
+            die("Connection failed: ". $conn->connect_error);
         }
         //submit query
-        $insert = "INSERT INTO USER (email, student, singer, age_group) VALUES (?, ?, ?, ?)";
-        $stmt = mysqli_prepare($conn, $insert);
-        $stmt->bind_param("ssss", $email, $student, $singer, $age_group);
-        $stmt->execute();
-        $stmt->close();
-
-        //test a retrieve all
-        $select = "SELECT email, student, singer, age_group, submission_time from USER";
-        if ($result = mysqli_query($conn, $select)) {
-            while ($row = mysqli_fetch_row($result)) {
-                printf("%s, %s, %s, %s, %s\n", $row[0], $row[1], $row[2], $row[3], $row[4]);
-            }
-            $result->close();
+        $sql = "INSERT INTO `USER` (email, student, singer, age_group) VALUES ('" . $email . "', '" . $student . "', '" . $singer . "', '" . $age . "')";
+        if ($conn->query($sql) === TRUE) {
+            echo "Record created successfully";
+        } else {
+            echo "Error : " . $sql . "<br>" . $conn->error;
         }
+        
+        //$insert = "INSERT INTO USER (email, student, singer, age_group) VALUES (?, ?, ?, ?)";
+        // $stmt = mysqli_prepare($conn, $insert);
+        // $stmt->bind_param("ssss", $email, $student, $singer, $age_group);
+        // $stmt->execute();
+        // $stmt->close();
+
+        // //test a retrieve all
+        // $select = "SELECT email, student, singer, age_group, submission_time from USER";
+        // if ($result = mysqli_query($conn, $select)) {
+        //     while ($row = mysqli_fetch_row($result)) {
+        //         printf("%s, %s, %s, %s, %s\n", $row[0], $row[1], $row[2], $row[3], $row[4]);
+        //     }
+        //     $result->close();
+        // }
         mysqli_close($conn);
-        //$sql = "INSERT INTO `USER` (email, student, singer, age_group) VALUES ('" . $email . "', '" . $student . "', '" . $singer . "', '" . $age . "')";
     }
 }
 
