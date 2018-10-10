@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/style1.css">
+        <script type="text/javascript" src="js/divcolour.js"></script>     
     </head>
     
     <body>
@@ -11,9 +12,9 @@
                 <li>f1</li>
                 <li>f2</li>
                 <li>f3</li>
-                <li>f4</li>
+                <li>Light-Dark Theme</li>
                 <li>Join the beta</li>
-            </ul>>
+            </ul>
         </div>
         
         
@@ -27,7 +28,7 @@
         </div>
         
         <div class ="bodyDiv" id ="feature1">
-            <h2>feature 1</h1>
+            <h2>feature 1</h2>
         </div>
         
         <div class ="bodyDiv" id ="feature2">     
@@ -38,12 +39,42 @@
             <h2>feature 3</h2>
         </div>
         
-        <div class ="bodyDiv" id ="feature4">
-            <h2>feature 4</h2>
+        
+        <div id ="feature4" class ="bodyDiv" >
+            <h2>Light-Dark Theme</h2>
+            <!-- needs a button -->
+            
+                      
+            <input type="button" id="themebtn" value="Change Theme" onclick="divColor('feature4')" />
+            
+            
+            
+            
         </div>
         
         <div class ="bodyDiv" id ="callTo"> 
             <p>facebook     |     twitter     |     youtube</p>
+            
+            <form method = "post">
+                <p>
+                    email: <input type ="text" email="email"><br>
+                    student: <input type ="radio" name="student" value ="yes">Yes<input type ="radio" name="student" value ="yes"> No<br>
+                    Are you a high-level musician? <input type ="radio" name="music" value ="yes">Yes<input type ="radio" name="music" value ="yes"> No<br>
+                    
+                    Please select your age:
+                    <input type ="radio" name="age" value ="15-25">15-25
+                    <input type ="radio" name="age" value ="26-35">26-35
+                    <input type ="radio" name="age" value ="36-45">35-45
+                    <input type ="radio" name="age" value ="46-55">46-55
+                    <input type ="radio" name="age" value ="56-65">56-65
+                    <input type ="radio" name="age" value ="65+">65+
+
+                
+                
+            </p>
+            </form>
+            
+            
         </div>
     
     
