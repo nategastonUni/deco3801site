@@ -219,3 +219,15 @@ a.socialBtn:hover{
     background-color: #0077b5;
     color: #FFFFFF;
 }
+
+
+/*light-dark theme*/
+#themebtn{
+    /*top right corner*/
+    margin-top: 3px;
+    margin-right: 1px;
+    position:absolute;
+    top:0;
+    right: 0;    
+    
+}
