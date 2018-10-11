@@ -1,121 +1,144 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Operapedia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-	<script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/validator.min.js"></script>
-	<script src="js/scripts.js"></script>
-</head> 
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
 
 <body>
-<div id="nav">
-  <div id="logo">Logo</div>
-		<ul>
-			<li>
-			<a href="#home">Home</a>
-			</li>
-			<li>
-			<a href="#mosaic">Feature 1</a>
-			</li>
-			<li>
-			<a href="#feedback">Feature 2</a>
-			</li>
-			<li>
-			<a href="#back">Feature 3</a>
-			</li>
-		</ul>
-</div>
-<div id="boximg1"></div>
-<div id="boxtxt1">
-    <h1>Feature goes here?</h1>
-    <p>Pellentesque imperdiet, elit eget ultricies ultricies, libero urna scelerisque lorem, vitae convallis eros felis eu tellus. Curabitur posuere ut neque nec elementum. Nam feugiat lorem metus, eget maximus nibh molestie at. Aliquam sed nisi ante. Vivamus vel sem turpis. Curabitur ut metus a ex bibendum accumsan id in orci. Nam placerat facilisis nulla a sodales. Aliquam quis malesuada nisl.</p>
-</div>
-<div id="boximg2"></div>
-<div id="boxtxt2"> 
-    <h1> Feature goes here?</h1>
-    <p> Pellentesque eget efficitur ipsum. Suspendisse mattis tellus libero, sit amet congue felis pulvinar eu. Vestibulum placerat facilisis felis non bibendum. Sed blandit est ex, ac sagittis enim varius at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas efficitur tellus in semper. Fusce sed ante purus. Nulla nec turpis ac neque facilisis varius. Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque ut consectetur massa. Nulla in neque sit amet dui rhoncus hendrerit. Morbi mattis lorem sed luctus sodales. Mauris quis venenatis nulla. Cras venenatis quam ut libero euismod, non consectetur urna porttitor. Cras viverra ac sapien sit amet semper.</p>
-</div>
-<div id="boximg3"></div>
-<div id="boxtxt3">
-    <h1>Feature goes here?</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper neque ullamcorper, imperdiet nunc faucibus, volutpat leo. Etiam vitae ex facilisis libero mattis elementum non nec tellus. Proin volutpat ante quis nibh vulputate, at vehicula diam pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras tincidunt quam at ipsum tempus porta. Sed aliquet viverra nulla, id molestie massa pretium sed. Donec blandit tempus tellus sit amet pellentesque. Proin in congue urna, in hendrerit tellus. Mauris dapibus ex sit amet dui pellentesque laoreet. Cras vitae sagittis tellus. Cras porttitor nec turpis ac egestas. Nullam non molestie arcu, at dictum nulla. Mauris semper molestie felis, a rhoncus quam varius id. Phasellus pellentesque turpis et faucibus viverra. Aenean rutrum venenatis facilisis.</p>
-</div>
-<div id="boximg4"></div>
-<div id="boxfooter">
-    <h4><label for="register">Register your interest!</label></h4>
-    <form role="form" id="register_form" data-toggle="validator">
-    <div class="form-group row">
-        <label for="inputEmail" class="col-sm-2 col-form-label"> Enter your email address</label>
-        <div class="col-sm-3">
-        <input type="email" class="form-control" id="email" placeholder="Email" data-error="Invalid email address" required>
-        </div>
+    <div id="nav">
+        <div id="logo">Logo</div>
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#mosaic">Feature 1</a>
+            </li>
+            <li>
+                <a href="#feedback">Feature 2</a>
+            </li>
+            <li>
+                <a href="#back">Feature 3</a>
+            </li>
+        </ul>
     </div>
-    <fieldset class="form-group">
-        <div class="row">
-        <legend class="col-form-label col-sm-2 pt-0"> Are you a student?</legend>
-        <div class="col-sm-10">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="studentRadio" id="studentRadio1" value="Yes" required>
-            <label class="form-check-label" for="studentRadio1">
-                Yes
-            </label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="studentRadio" id="studentRadio2" value="No" required>
-            <label class="form-check-label" for="studentRadio2">
-                No
-            </label>
-            </div>
-        </div>
-        </div>
-    </fieldset>
-    <fieldset class="form-group">
-        <div class="row">
-        <legend class="col-form-label col-sm-2 pt-0"> Are you a professional singer or teacher?</legend>
-        <div class="col-sm-10">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="singerRadio" id="singerRadio1" value="Yes" required>
-            <label class="form-check-label" for="singerRadio1">
-                Yes
-            </label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="singerRadio" id="singerRadio2" value="No" required>
-            <label class="form-check-label" for="singerRadio2">
-                No
-            </label>
-            </div>
-        </div>
-        </div>
-    </fieldset>
-        <fieldset class="form-group">
-        <div class="row">
-        <legend class="col-form-label col-sm-2 pt-0"> Choose your age group</legend>
-        <div class="col-sm-10">
-            <select class="form-control col-sm-3" id="ageGroup" required>
-            <option>15-25</option>
-            <option>26-35</option>
-            <option>36-45</option>
-            <option>46-55</option>
-            <option>56-65</option>
-            <option>65+</option>
-            </select>
-        </div>
-        </div>
-    </fieldset>
-    <div class="form-group">
-        <div class="col-sm-10">
-        <button type="button" id="form-submit" class="btn btn-success btn-1g">Register</button>
-        </div>
+    <div id="boximg1"></div>
+    <div id="boxtxt1">
+        <h1>Feature goes here?</h1>
+        <p>Pellentesque imperdiet, elit eget ultricies ultricies, libero urna scelerisque lorem, vitae convallis eros
+            felis eu tellus. Curabitur posuere ut neque nec elementum. Nam feugiat lorem metus, eget maximus nibh
+            molestie at. Aliquam sed nisi ante. Vivamus vel sem turpis. Curabitur ut metus a ex bibendum accumsan id in
+            orci. Nam placerat facilisis nulla a sodales. Aliquam quis malesuada nisl.</p>
     </div>
-    </form>
-</div>
+    <div id="boximg2"></div>
+    <div id="boxtxt2">
+        <h1> Feature goes here?</h1>
+        <p> Pellentesque eget efficitur ipsum. Suspendisse mattis tellus libero, sit amet congue felis pulvinar eu.
+            Vestibulum placerat facilisis felis non bibendum. Sed blandit est ex, ac sagittis enim varius at. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas efficitur tellus in semper. Fusce sed ante
+            purus. Nulla nec turpis ac neque facilisis varius. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque ut consectetur massa.
+            Nulla in neque sit amet dui rhoncus hendrerit. Morbi mattis lorem sed luctus sodales. Mauris quis venenatis
+            nulla. Cras venenatis quam ut libero euismod, non consectetur urna porttitor. Cras viverra ac sapien sit
+            amet semper.</p>
+    </div>
+    <div id="boximg3"></div>
+    <div id="boxtxt3">
+        <h1>Feature goes here?</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper neque ullamcorper, imperdiet nunc
+            faucibus, volutpat leo. Etiam vitae ex facilisis libero mattis elementum non nec tellus. Proin volutpat
+            ante quis nibh vulputate, at vehicula diam pharetra. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Cras tincidunt quam at ipsum tempus porta. Sed aliquet viverra nulla, id molestie massa pretium
+            sed. Donec blandit tempus tellus sit amet pellentesque. Proin in congue urna, in hendrerit tellus. Mauris
+            dapibus ex sit amet dui pellentesque laoreet. Cras vitae sagittis tellus. Cras porttitor nec turpis ac
+            egestas. Nullam non molestie arcu, at dictum nulla. Mauris semper molestie felis, a rhoncus quam varius id.
+            Phasellus pellentesque turpis et faucibus viverra. Aenean rutrum venenatis facilisis.</p>
+    </div>
+    <div id="boximg4"></div>
+    <div id="boxfooter">
+        <h4><label for="register">Register your interest!</label></h4>
+        <form role="form" id="register_form">
+            <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label"> Enter your email address</label>
+                <div class="col-sm-3">
+                    <input type="email" class="form-control" id="email" placeholder="Email" data-error="Invalid email address"
+                        required>
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0"> Are you a student?</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="studentRadio" id="studentRadio1" value="Yes"
+                                required>
+                            <label class="form-check-label" for="studentRadio1">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="studentRadio" id="studentRadio2" value="No"
+                                required>
+                            <label class="form-check-label" for="studentRadio2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0"> Are you a professional singer or teacher?</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="singerRadio" id="singerRadio1" value="Yes"
+                                required>
+                            <label class="form-check-label" for="singerRadio1">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="singerRadio" id="singerRadio2" value="No"
+                                required>
+                            <label class="form-check-label" for="singerRadio2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0"> Choose your age group</legend>
+                    <div class="col-sm-10">
+                        <select class="form-control col-sm-3" id="ageGroup" required>
+                            <option>15-25</option>
+                            <option>26-35</option>
+                            <option>36-45</option>
+                            <option>46-55</option>
+                            <option>56-65</option>
+                            <option>65+</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <button type="submit" id="form-submit" class="btn btn-success btn-1g">Register</button>
+                </div>
+                <div id="form-success"></div>
+            </div>
+        </form>
+    </div>
 
 </body>
-	
+
 </html>
