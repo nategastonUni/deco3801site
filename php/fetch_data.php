@@ -2,7 +2,7 @@
 
 $GLOBALS['servername'] = 'localhost';
 $GLOBALS['username'] = 'root';
-$GLOBALS['password'] = '';
+$GLOBALS['password'] = 'c08a15fcaf53e799';
 $GLOBALS['dbname'] = 'operapedia_website';
 $result_array = array();
 
