@@ -149,7 +149,7 @@
         //student pie chart
         var studentCount = 0;
         for (var response in result) {
-            if (result[response]["student"] == "yes") {
+            if ((result[response]["student"] == "Yes") || (result[response]["student"] == "yes")) {
                 studentCount++;
             }
         }
@@ -185,7 +185,7 @@
         //singer pie chart
         var singerCount = 0;
         for (var response in result) {
-            if (result[response]["singer"] == "yes") {
+            if ((result[response]["singer"] == "Yes") || (result[response]["singer"] == "yes")) {
                 singerCount++;
             }
         }
