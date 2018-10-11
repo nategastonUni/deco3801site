@@ -16,9 +16,14 @@ body {
 #logo {
 	color: #CFCCCE;
 	padding: 20px;
-	font-size: 64px;
 	transition: all ease 1.5s;
-	font-family: Gill Sans;
+	
+
+}
+
+.logo{
+	max-height: 80px;
+	margin-top: -10px;
 }
 
 #nav.shrink {
