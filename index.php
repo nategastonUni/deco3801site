@@ -144,7 +144,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         <div id ="feature4" class ="bodyDiv" >
             <h2>Light-Dark Theme</h2>
-            <!-- needs a button -->
+            <p>
+                To make things easier to read while waiting in the wings, or while in the sun, change Operapedia's theme from light to dark at the press of a button. 
+            
+            </p>
             
                       
             <input type="button" id="themebtn" value="Change Theme" onclick="divColor('feature4')" />
@@ -154,9 +157,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
         </div>
         
-        <div class ="bodyDiv" id ="callTo"> 
-            <p>facebook     |     twitter     |     youtube</p>
-            
+        <div class ="bodyDiv" id ="callTo">
+            <div>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//deco3801-teamstilio.uqcloud.net/" class="socialBtn bouncy" id="fb">Facebook</a>
+                <a href="https://twitter.com/home?status=Just%20checked%20out%20the%20goods%20with%20Team%20Stilio!%20They%20sucked.%20" class="socialBtn bouncy" id="twt" style="animation-delay:0.07s">Twitter</a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=&title=Team%20Stilio&summary=Just%20checked%20out%20the%20goods%20with%20Team%20Stilio!%20They%20sucked.%20&source=" class="socialBtn bouncy" id="lkIn" style="animation-delay:0.14s">LinkedIn</a>
+            </div>
             <h2> Register your Interest! </h2>
             <form method = "post">
                 <p>

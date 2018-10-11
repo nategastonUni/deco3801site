@@ -88,9 +88,65 @@ h1,h2,h3,h4,p, ul{
     margin-right: 1px;
     position:absolute;
     top:0;
-    right: 0;
+    right: 0;    
     
-    
-    
-    
+}
+
+a.socialBtn{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+ transition: all 0.2s;
+}
+
+a.socialBtn:hover{
+   color:#000000;
+    background-color: #FFFFFF;
+}
+
+
+@media all and (max-width:30em){
+ a.socialBtn{
+  display:block;
+  margin:0.4em auto;
+ }
+}
+
+
+.bouncy{
+    animation:bouncy 5s infinite linear;
+    position: relative;
+}
+@keyframes bouncy{
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.90em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+
+}
+
+#fb:hover{
+    background-color: #3b5998;
+    color: #FFFFFF;
+}
+
+#twt:hover{
+    background-color: #55acee;
+    color: #FFFFFF;
+}
+
+#lkIn:hover{
+    background-color: #0077b5;
+    color: #FFFFFF;
 }
