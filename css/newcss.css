@@ -101,3 +101,16 @@ a.socialBtn:hover{
 #f4D1{
     display:none;
 }
+
+
+#boxfooter {
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-bottom: 50px;
+	width: 100%;
+	display: table;
+	background-attachment: fixed;
+	height: 30vh;
+	background-color: #252325;
+	color: #CFCCCE;
+}
