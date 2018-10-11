@@ -37,7 +37,7 @@ function submitForm() {
     .text();
 
   if (email == "" || student == "" || age == "" || singer == "") {
-    $("#error-message").html("<h5> All fields required</h5>");
+    $("#message").html("<h5> All fields required</h5>");
   } else {
     request = $.ajax({
       type: "POST",
@@ -59,11 +59,18 @@ function submitForm() {
       console.log("signup successful");
     });
     request.fail(function(jqXHR, textStatus, errorThrown) {
+      formFailure();
       console.error("The following error occurred: " + textStatus, errorThrown);
     });
   }
 }
 
 function formSucess() {
-  $("#success-message").html("<h4> Registration submitted sucessfully </h4>");
+  $("#message").html(
+    '<h5><span class="label label-default">Thanks!</span></h5>'
+  );
+}
+
+function formFailure() {
+  $("#message").html('<h5><span class="label label-default">Error</span></h5>');
 }
