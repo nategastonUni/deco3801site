@@ -193,11 +193,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p> 
                 <?php
                     //test a retrieve all                    
-                    $GLOBALS['servername'] = 'localhost';
-                    $GLOBALS['username'] = 'root';
-                    $GLOBALS['password'] = 'c08a15fcaf53e799';
-                    $GLOBALS['dbname'] = 'operapedia_website';
-                    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbname']);
                     //check connection
                     if ($conn->connect_error) {
                         die("Connection failed: ". $conn->connect_error);
@@ -210,14 +205,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if ($result->num_rows > 0) {
                         //output data of each row
                         while ($row = $result->fetch_assoc()) {
-                            $format = 'User: %s, Student: %s, Singer: %s, Age Group: %s, %Time: %s';
-                            echo sprintf($format, $row[0], $row[1], $row[2], $row[3], $row[4]);
+                            $format = 'Email: %s, Student: %s, Singer: %s, Age Group: %s, %Time: %s';
+                            echo sprintf($format, $row["email"], $row["student"], $row["singer"], $row["age_group"], $row["submission_time"]);
                         }
                     } else {
                         echo "0 results";
                     }
                     $conn->close();
                 ?>
+                </p>
 
             </form>
             
