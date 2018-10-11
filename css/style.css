@@ -117,6 +117,13 @@ li a:hover {
 	background-attachment: fixed;
 }
 
+
+#boxtext4 {
+	width: 100%;
+	display: table;
+	background-attachment: fixed;
+}
+
 #boxfooter {
 	padding-top: 20px;
 	padding-left: 100px;
