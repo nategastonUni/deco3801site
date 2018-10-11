@@ -95,9 +95,9 @@ li a:hover {
 }
 
 #boximg2 {
-	height: 100vh;
+	height: 50vh;
 	width: 100%;
-	background-image: url(../images/Operapediabg.jpg);
+	background-image: url(../images/Operapediabgsmall.jpg);
 	background-size: cover;
 	display: table;
 	background-attachment: fixed;
@@ -121,9 +121,9 @@ li a:hover {
 }
 
 #boximg3 {
-	height: 100vh;
+	height: 50vh;
 	width: 100%;
-	background-image: url(../images/Operapediabg.jpg);
+	background-image: url(../images/Operapediabgsmall.jpg);
 	background-size: cover;
 	display: table;
 	background-attachment: fixed;
@@ -149,9 +149,9 @@ li a:hover {
 }
 
 #boximg4 {
-	height: 100vh;
+	height: 50vh;
 	width: 100%;
-	background-image: url(../images/Operapediabg.jpg);
+	background-image: url(../images/Operapediabgsmall.jpg);
 	background-size: cover;
 	display: table;
 	background-attachment: fixed;
@@ -178,7 +178,7 @@ li a:hover {
 #boximg5 {
 	height: 50vh;
 	width: 100%;
-	background-image: url(../images/Operapediabg.jpg);
+	background-image: url(../images/Operapediabgsmall.jpg);
 	background-size: cover;
 	display: table;
 	background-attachment: fixed;
