@@ -171,8 +171,9 @@ li a:hover {
 }
 
 #boxfooter {
-	padding-top: 20px;
+	padding-top: 50px;
 	padding-left: 100px;
+	padding-bottom: 50px;
 	width: 100%;
 	display: table;
 	background-attachment: fixed;
