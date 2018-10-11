@@ -8,9 +8,8 @@ $(document).ready(function() {
   });
 });
 
-$("#register_form")
-  .validator()
-  .on("submit", function(event) {
+$(document).ready(function() {
+  $("#register_form").submit(function(event) {
     //redirect form submission
     if (event.isDefaultPrevented()) {
       //handle invalid form
@@ -19,22 +18,24 @@ $("#register_form")
       submitForm();
     }
   });
+});
 
-// $(document).ready(function () {
-//     $("#form-submit").click(function (e) {
-//         e.preventDefault();
-//         submitForm();
-//     })
+// $(document).ready(function() {
+//   $("#form-submit").click(function(e) {
+//     event.preventDefault();
+//       submitForm();
+//   });
 // });
 
 function submitForm() {
+  $form = $(this);
   const email = $("#email").val();
   const student = $("input[name=studentRadio]:checked").val();
   const singer = $("input[name=singerRadio]:checked").val();
   const age = $("input[name=ageRadio]:checked").val();
 
   if (email == "" || student == "" || age == "" || singer == "") {
-    $("#errorMessage").html("<h5> All fields required</h5>");
+    $("#error-message").html("<h5> All fields required</h5>");
   } else {
     $.ajax({
       type: "POST",
@@ -62,5 +63,5 @@ function submitForm() {
 }
 
 function formSucess() {
-  $("#form-success").html("<h4> Registration submitted sucessfully </h4>");
+  $("#success-message").html("<h4> Registration submitted sucessfully </h4>");
 }
