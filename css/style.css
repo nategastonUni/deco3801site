@@ -66,12 +66,21 @@ li a:hover {
 	background-color: #453734;
 }
 
+#boximg1 {
+	height: 100vh;
+	width: 100%;
+	background-image: url(../images/Operapediabg.jpg);
+	background-size: cover;
+	background-color: black;
+	display: table;
+	background-attachment: fixed;
+	image
+}
 
-.boxclass{
-    padding-top: 50px;
-    width: 100%;
+#boxtxt1 {
+	width: 100%;
 	height: 70vh;
-	text-align: justify;
+	text-align: center;
 	background-color: #252325;
 	background-size: cover;
 	display: table;
@@ -85,51 +94,64 @@ li a:hover {
     padding-right: 15%; 
 }
 
-
-#boximg1 {
-	height: 100vh;
-	width: 100%;
-	background-image: url(Placeholder.png);
-	background-size: cover;
-	background-color: black;
-	display: table;
-	background-attachment: fixed;
-}
-
-#boxtxt1 {
-      
-
-}
-
 #boximg2 {
 	height: 100vh;
 	width: 100%;
-	background-image: url(Placeholder-02.jpg);
+	background-image: url(../images/Operapediabg.jpg);
 	background-size: cover;
 	display: table;
 	background-attachment: fixed;
 }
 
 #boxtxt2 {
-	
+	width: 100%;
+	height: 70vh;
+	text-align: center;
+	background-color: #252325;
+	background-size: cover;
+	display: table;
+	background-attachment: fixed;
+	color: #8B898B;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	margin-top: -10px;
+	margin-bottom: 0px;
+	padding-left: 15%;
+    padding-right: 15%;
 }
 
 #boximg3 {
 	height: 100vh;
 	width: 100%;
-	background-image: url(Placeholder.png);
+	background-image: url(../images/Operapediabg.jpg);
 	background-size: cover;
 	display: table;
 	background-attachment: fixed;
 }
 
 #boxtxt3 {
+    padding-left: 100px;
+    padding-right: 100px;
+	width: 100%;
+	height: 70vh;
+	text-align: center;
+	background-color: #252325;
+	background-size: cover;
+	display: table;
+	background-attachment: fixed;
+	color: #8B898B;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	margin-top: -10px;
+	margin-bottom: 0px;
+	padding-left: 15%;
+    padding-right: 15%;
 }
 
 #boximg4 {
 	height: 100vh;
 	width: 100%;
-	background-image: url(Placeholder-02.jpg);
+	background-image: url(../images/Operapediabg.jpg);
 	background-size: cover;
 	display: table;
 	background-attachment: fixed;
@@ -155,7 +177,7 @@ li a:hover {
 #boximg5 {
 	height: 50vh;
 	width: 100%;
-	background-image: url(Placeholder-02.jpg);
+	background-image: url(../images/Operapediabg.jpg);
 	background-size: cover;
 	display: table;
 	background-attachment: fixed;
@@ -163,8 +185,7 @@ li a:hover {
 
 #boxfooter {
 	padding-top: 50px;
-	padding-left: 15%;
-    padding-right: 15%;
+	padding-left: 100px;
 	padding-bottom: 50px;
 	width: 100%;
 	display: table;
@@ -268,3 +289,6 @@ a.socialBtn:hover{
 
 /*end light dark theme*/
 
+.boxclass{
+    
+}
