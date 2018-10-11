@@ -219,3 +219,38 @@ a.socialBtn:hover{
     background-color: #0077b5;
     color: #FFFFFF;
 }
+
+
+/*light-dark theme*/
+.phoneFrame{    
+    border-radius: 25px;
+    max-height: 600px;
+    max-width: 40%;
+    margin: 10px;
+    float: left;
+}
+#f4D2{
+    display:block;
+}
+
+#f4D1{
+    display:none;
+}
+
+#boxtxt4 {
+    overflow: hidden;
+    
+    background-color: black;
+    border-top: 1px solid white;
+    position: relative;
+}
+
+#boxtxt4.toggled {
+    overflow: hidden;
+
+ 
+    border-top: 1px solid white;
+    background-color: rgb(244,113,33);
+    position: relative;
+}
+/*end light dark theme*/
