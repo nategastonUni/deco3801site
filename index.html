@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src ="js/divcolour.js"></script>
 </head>
 
 <body>
@@ -58,11 +59,14 @@
     </div>
     <div id="boximg4"></div>
     <div id="boxtxt4">
+        <img class="phoneFrame" src="images/dark1.png" id="f4D1">
+        <img class="phoneFrame" src="images/light1.png" id="f4D2">
         <div class ="content">
             <h1>Light-Dark Theme</h1>
-            <p>To make things easier to read while waiting in the wings, or while in the sun, change Operapedia's theme
+            <p>To make things easier to read while waiting in the wings, or while under the sun, change Operapedia's theme
             from light to dark at the press of a button.</p>
         </div>
+        <input type="button" id="themebtn" value="Change Theme" onclick="divColor('boxtxt4')" />  
         
     </div>
     <div id="boxfooter">
