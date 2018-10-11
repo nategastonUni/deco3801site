@@ -130,15 +130,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         
         <div class ="bodyDiv" id ="feature1">
-            <h2>feature 1</h2>
+            <h2>Vocal Coaching</h2>
+			<p>
+			Operapedia boasts having professionally recorded and designed audio guides by a professional vocal coach. These audio guides are designed to be rhythmically timed so that the pronunciation is heard as it would be sung during a performance, and there will be a guide for each line of every aria.
+			</p>
         </div>
         
         <div class ="bodyDiv" id ="feature2">     
-            <h2>feature 2</h2>
+            <h2>IPA Translations</h2>
+			<p>
+			Along with the audio guides, Operapedia also includes the original native text along with the International Phonetic Alphabet (IPA) translation for each line. This ensures that opera singer foreign to the native language of the aria will be able to gain an understanding of the correct pronunciation of the aria through the IPA translation. 
+			</p>
         </div>
         
         <div class ="bodyDiv" id ="feature3">        
-            <h2>feature 3</h2>
+            <h2>Store</h2>
+			<p>
+			Operapedia’s unique audio guides, native texts, and International Phonetic Alphabet translations can be purchased within packs of 5 arias. These packs are sorted and designed specifically for different voice types. Once purchased, the arias can be viewed online or download offline, to ensure ease of use no matter where you are.
+			</p>
         </div>
         
         
