@@ -202,13 +202,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     }
 
                     //test a retrieve all
-                    $select = "SELECT email, student, singer, age_group, submission_time FROM USER";
+                    $select = "SELECT student, singer, age_group, submission_time FROM USER";
                     $result = $conn->query($select);
 
                     if ($result->num_rows > 0) {
                         //output data of each row
                         while ($row = $result->fetch_assoc()) {
-                            echo "Email: " . $row["email"] . ", Student: " . $row["student"] . ", Singer: " . $row["singer"] . ", Age Group: " . $row["age_group"] . ", Time: " . $row["submission_time"] . "<br>";
+                            echo "Email: <not queried>, Student: " . $row["student"] . ", Singer: " . $row["singer"] . ", Age Group: " . $row["age_group"] . ", Time: " . $row["submission_time"] . "<br>";
                         }
                     } else {
                         echo "0 results";
