@@ -192,7 +192,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </p>
                 <p> 
                 <?php
-                    //test a retrieve all                    
+                    //test a retrieve all        
+                    //create conncetion
+                     $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'], $GLOBALS['dbname']);
+            
                     //check connection
                     if ($conn->connect_error) {
                         die("Connection failed: ". $conn->connect_error);
