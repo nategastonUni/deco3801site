@@ -32,12 +32,14 @@ function submitForm() {
   const email = $("#email").val();
   const student = $("input[name=studentRadio]:checked").val();
   const singer = $("input[name=singerRadio]:checked").val();
-  const age = $("input[name=ageRadio]:checked").val();
+  const age = $("#ageGroup")
+    .find(":selected")
+    .text();
 
   if (email == "" || student == "" || age == "" || singer == "") {
     $("#error-message").html("<h5> All fields required</h5>");
   } else {
-    $.ajax({
+    request = $.ajax({
       type: "POST",
       url: "php/register.php",
       data:
@@ -48,16 +50,16 @@ function submitForm() {
         "&singer=" +
         singer +
         "&age=" +
-        age,
-      success: function(text) {
-        if (text == "success") {
-          formSucess();
-        }
-        console.log("signup successful");
-      },
-      error: function() {
-        console.log("signup unsucessful");
+        age
+    });
+    request.done(function(response, textStatus, jqXHR) {
+      if (textStatus == "success") {
+        formSucess();
       }
+      console.log("signup successful");
+    });
+    request.fail(function(jqXHR, textStatus, errorThrown) {
+      console.error("The following error occurred: " + textStatus, errorThrown);
     });
   }
 }
