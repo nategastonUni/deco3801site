@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check errors before sending to database
     if(empty($emailError) && empty($studentError) && empty($singerError) && empty($ageError)){
         //success
-        $success = "<p>Form validated</p>";
+        $success = "<br>Form validated";
         //send to database
         //testing the steel thread connection for now
 
@@ -208,8 +208,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if ($result->num_rows > 0) {
                         //output data of each row
                         while ($row = $result->fetch_assoc()) {
-                            $format = 'Email: %s, Student: %s, Singer: %s, Age Group: %s, %Time: %s';
-                            echo sprintf($format, $row["email"], $row["student"], $row["singer"], $row["age_group"], $row["submission_time"]);
+                            echo "Email: " . $row["email"] . ", Student: " . $row["student"] . ", Singer: " . $row["singer"] . ", Age Group: " . $row["age_group"] . ", Time: " . $row["submission_time"] . "<br>";
                         }
                     } else {
                         echo "0 results";
