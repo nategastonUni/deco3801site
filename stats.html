@@ -21,7 +21,7 @@
 
     <div class="bodyDiv" id="graphs">
         <h2>graphs</h2>
-        <div class="ct-chart">
+        <div class="ct-chart-student">
         </div>
 
         <div class="ct-chartt">
@@ -33,6 +33,8 @@
         <div class="ct-chart-hours">
         </div>
 
+        <div class="ct-chart-daily">
+        </div>
 
 
 
@@ -48,6 +50,28 @@
 
             var count = result.length;
 
+            //pie chart options
+            var options = {
+                labelInterpolationFnc: function (value) {
+                    return value[0]
+                }
+            };
+
+            var responsiveOptions = [
+                ['screen and (min-width: 640px)', {
+                    chartPadding: 30,
+                    labelOffset: 100,
+                    labelDirection: 'explode',
+                    labelInterpolationFnc: function (value) {
+                        return value;
+                    }
+                }],
+                ['screen and (min-width: 1024px)', {
+                    labelOffset: 80,
+                    chartPadding: 20
+                }]
+            ];
+
             //student pie chart
             var studentCount = 0;
             for (var response in result) {
@@ -57,11 +81,13 @@
             }
             var nonStudentCount = count - studentCount;
             var studentSeries = [studentCount, nonStudentCount]
+            var studentData = {
+                labels: ['Students', 'Non-Students'],
+                series: studentSeries
+            }
             console.log(studentSeries);
 
-            new Chartist.Pie('.ct-chart', {
-                series: studentSeries
-            });
+            new Chartist.Pie('.ct-chart-student', studentData, options, responsiveOptions);
 
 
             //singer pie chart
@@ -127,6 +153,26 @@
 
             };
             new Chartist.Bar('.ct-chart-hours', hourlyData);
+
+            //clicks per day in the last week
+            var currentDate = new Date();
+            var millisecondsInDay = 3600000 * 24;
+            var dailyClicks = new Array(7).fill(0);
+            for (var response in result) {
+                var diff = currentDate - result[response]["submission_time"];
+                var dayDiff = parseInt(diff / millisecondsInDay);
+                if (dayDiff < 8) {
+                    dailyClicks[dayDiff]++;
+                }
+            }
+            console.log(dailyClicks);
+            dailyClicks.reverse();
+            var dailyData = {
+                labels: ['7', '6', '5', '4', '3', '2', '1'],
+                series: [dailyClicks]
+
+            };
+            new Chartist.Bar('.ct-chart-daily', dailyData);
 
 
         </script>
