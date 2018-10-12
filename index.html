@@ -8,16 +8,16 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src ="js/divcolour.js"></script>
+    <script src="js/divcolour.js"></script>
 </head>
 
 <body>
     <div id="nav">
         <div id="logo"><img class="logo" src="images/StilioLogo_White.png">
-		</div>
+        </div>
         <ul>
             <li>
                 <a href="#home">Home</a>
@@ -46,41 +46,42 @@
     <div id="boximg2"></div>
     <div id="boxtxt2" class="boxclass">
         <img class="phoneFrame" src="images/light3.png" id="f4L3">
-        
+
         <h1> IPA Translations</h1>
         <p> Along with the audio guides, Operapedia also includes the original native text along with the International
             Phonetic Alphabet (IPA) translation for each line. This ensures that opera singer foreign to the native
             language of the aria will be able to gain an understanding of the correct pronunciation of the aria through
             the IPA translation.</p>
-        
+
     </div>
     <div id="boximg3"></div>
-    <div id="boxtxt3" class ="boxclass">
+    <div id="boxtxt3" class="boxclass">
         <h1>Store</h1>
         <p>Operapedia’s unique audio guides, native texts, and International Phonetic Alphabet translations can be
             purchased within packs of 5 arias. These packs are sorted and designed specifically for different voice
             types. Once purchased, the arias can be viewed online or download offline, to ensure ease of use no matter
             where you are.</p>
-        <div id="frames">      
-            <img class="phoneFrame" src="images/light1.png" >
-            <img class="phoneFrame" src="images/light2.png" >
-            <img class="phoneFrame" src="images/light3.png" >
+        <div id="frames">
+            <img class="phoneFrame" src="images/light1.png">
+            <img class="phoneFrame" src="images/light2.png">
+            <img class="phoneFrame" src="images/light3.png">
         </div>
 
     </div>
     <div id="boximg4"></div>
-    <div id="boxtxt4" class ="boxclass">
+    <div id="boxtxt4" class="boxclass">
         <img class="phoneFrame" src="images/dark1.png" id="f4D1">
         <img class="phoneFrame" src="images/light1.png" id="f4D2">
-        <div class ="content">
+        <div class="content">
             <h1>Light-Dark Theme</h1>
-            <p>To make things easier to read while waiting in the wings, or while under the sun, change Operapedia's theme
-            from light to dark at the press of a button.</p>
+            <p>To make things easier to read while waiting in the wings, or while under the sun, change Operapedia's
+                theme
+                from light to dark at the press of a button.</p>
         </div>
-        <input type="button" id="themebtn" value="Change Theme" onclick="divColor('boxtxt4')" />  
-        
+        <input type="button" id="themebtn" value="Change Theme" onclick="divColor('boxtxt4')" />
+
     </div>
-	<div id="boximg5"></div>
+    <div id="boximg5"></div>
     <div id="boxfooter">
         <div class="bodyDiv" id="callTo">
             <div>
@@ -92,79 +93,90 @@
                     class="socialBtn bouncy" id="lkIn" style="animation-delay:0.14s">LinkedIn</a>
             </div>
         </div>
-        <h4><label for="register">Register your interest!</label></h4>
-        <form role="form" id="register_form">
-            <div class="form-group row">
-                <label for="inputEmail" class="col-sm-2 col-form-label"> Enter your email address</label>
-                <div class="col-sm-3">
-                    <input type="email" class="form-control" id="email" placeholder="Email" data-error="Invalid email address"
-                        required>
+
+        <div class="container offset-4">
+            <div class="row">
+                <div class="col-md-6 text-center" style="padding: 0px 0 20px 0">
+                    <h4><label for="register_form">Register your interest!</label></h4>
                 </div>
             </div>
-            <fieldset class="form-group">
-                <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0"> Are you a student?</legend>
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="studentRadio" id="studentRadio1" value="Yes"
-                                required>
-                            <label class="form-check-label" for="studentRadio1">
-                                Yes
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="studentRadio" id="studentRadio2" value="No"
-                                required>
-                            <label class="form-check-label" for="studentRadio2">
-                                No
-                            </label>
-                        </div>
+            <form role="form" id="register_form">
+                <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-3 col-form-label"> Enter your email address</label>
+                    <div class="col-sm-3">
+                        <input type="email" class="form-control" id="email" placeholder="Email" data-error="Invalid email address"
+                            required>
                     </div>
                 </div>
-            </fieldset>
-            <fieldset class="form-group">
-                <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0"> Are you a professional singer or teacher?</legend>
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="singerRadio" id="singerRadio1" value="Yes"
-                                required>
-                            <label class="form-check-label" for="singerRadio1">
-                                Yes
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="singerRadio" id="singerRadio2" value="No"
-                                required>
-                            <label class="form-check-label" for="singerRadio2">
-                                No
-                            </label>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0"> Are you a student?</legend>
+                        <div class="col-sm-7">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="studentRadio" id="studentRadio1"
+                                    value="Yes" required>
+                                <label class="form-check-label" for="studentRadio1">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="studentRadio" id="studentRadio2"
+                                    value="No" required>
+                                <label class="form-check-label" for="studentRadio2">
+                                    No
+                                </label>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </fieldset>
-            <fieldset class="form-group">
-                <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0"> Choose your age group</legend>
-                    <div class="col-sm-6">
-                        <select class="form-control col-sm-3" id="ageGroup" required>
-                            <option>15-25</option>
-                            <option>26-35</option>
-                            <option>36-45</option>
-                            <option>46-55</option>
-                            <option>56-65</option>
-                            <option>65+</option>
-                        </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0"> Are you a professional singer or teacher?</legend>
+                        <div class="col-sm-7">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="singerRadio" id="singerRadio1" value="Yes"
+                                    required>
+                                <label class="form-check-label" for="singerRadio1">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="singerRadio" id="singerRadio2" value="No"
+                                    required>
+                                <label class="form-check-label" for="singerRadio2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0"> Choose your age group</legend>
+                        <div class="col-sm-6">
+                            <select class="form-control col-sm-3" id="ageGroup" required>
+                                <option>15-25</option>
+                                <option>26-35</option>
+                                <option>36-45</option>
+                                <option>46-55</option>
+                                <option>56-65</option>
+                                <option>65+</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="row justify-content-center">
+                    <div class="col-md-6" style="padding-top: 20px">
+                        <button type="submit" id="form-submit" class="btn btn-warning btn-1g">Register</button>
                     </div>
                 </div>
-            </fieldset>
-            <div class="col-sm-5">
-                <div class="text-right">
-                    <button type="submit" id="form-submit" class="btn btn-success btn-1g">Register</button>
+            </form>
+            <div class="row justify-content-center">
+                <div class="col-md-6" style="padding-top: 20px">
+                    <div id="message"> </div>
                 </div>
+
             </div>
-        </form>
-        <div id="message">
         </div>
     </div>
 
