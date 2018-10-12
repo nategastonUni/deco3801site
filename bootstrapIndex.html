@@ -159,12 +159,16 @@
             </div>
         </div>
 
-        <div class="container">
-            <h4><label for="register">Register your interest!</label></h4>
+        <div class="container offset-4">
+            <div class="row">
+                <div class="col-md-6 text-center" style="padding: 0px 0 20px 0">
+                    <h4><label for="register_form">Register your interest!</label></h4>
+                </div>
+            </div>
             <form role="form" id="register_form">
                 <div class="form-group row">
                     <label for="inputEmail" class="col-sm-3 col-form-label"> Enter your email address</label>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <input type="email" class="form-control" id="email" placeholder="Email" data-error="Invalid email address"
                             required>
                     </div>
@@ -215,7 +219,7 @@
                     <div class="row">
                         <legend class="col-form-label col-sm-3 pt-0"> Choose your age group</legend>
                         <div class="col-sm-6">
-                            <select class="form-control col-sm-5" id="ageGroup" required>
+                            <select class="form-control col-sm-3" id="ageGroup" required>
                                 <option>15-25</option>
                                 <option>26-35</option>
                                 <option>36-45</option>
@@ -226,13 +230,17 @@
                         </div>
                     </div>
                 </fieldset>
-                <div class="col-sm-5" style="padding-top: 20px">
-                    <div class="text-right">
-                        <button type="submit" id="form-submit" class="btn btn-success btn-1g">Register</button>
+                <div class="row justify-content-center">
+                    <div class="col-md-6" style="padding-top: 20px">
+                        <button type="submit" id="form-submit" class="btn btn-warning btn-1g">Register</button>
                     </div>
                 </div>
             </form>
-            <div id="message">
+            <div class="row justify-content-center">
+                <div class="col-md-6" style="padding-top: 20px">
+                    <div id="message"> </div>
+                </div>
+
             </div>
         </div>
 

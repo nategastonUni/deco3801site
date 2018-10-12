@@ -72,5 +72,7 @@ function formSucess() {
 }
 
 function formFailure() {
-  $("#message").html('<h5><span class="label label-default">Error</span></h5>');
+  $("#message").html(
+    '<h5><span class="label label-default">An error occurred, please try again later.</span></h5>'
+  );
 }
