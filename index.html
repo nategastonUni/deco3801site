@@ -6,15 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrapcss.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/divcolour.js"></script>
 </head>
 
 <body id="page-top">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top" id="mainNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"><img height="60" width="230" src="images/operapedialogo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,9 +41,7 @@
         </div>
     </nav>
 
-
-
-    <div class="jumbotron jumbotron-fluid" style="margin: 0">
+    <div class="jumbotron jumbotron-fluid" style="margin: 0;overflow:hidden">
         <div class="container">
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
@@ -51,10 +49,11 @@
 
 
 
-    <section id="intro" style="padding: 0%; background-color: #fcbf7c; padding: 0px">
+    <section id="intro" style="padding: 0 20%; background-color: #fcbf7c; overflow:hidden">
+
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto" style="padding: 50px 0">
+                <div class="col-lg-8 mx-auto" style="padding: 5% 0">
                     <div class="text-center">
                         <h2>For the modern singer</h2>
                     </div>
@@ -65,15 +64,17 @@
                 </div>
             </div>
         </div>
+
+
     </section>
 
-
-    <section id="vocalCoaching" style="padding: 0%">
+    <section id="vocalCoaching" style="padding: 0;overflow:hidden">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto" style="padding: 150px 0">
                     <h2>Vocal Coaching</h2>
-                    <p class="lead">Operapedia boasts professionally recorded and designed audio guides prepared by an
+                    <p class="lead">Operapedia boasts professionally recorded and designed audio guides prepared by
+                        an
                         opera vocal coach.
                         These audio guides are rhythmically timed so that the pronunciation is heard just as
                         it would be sung during a performance, broken down for each line of every aria.</p>
@@ -83,12 +84,13 @@
                 </div>
             </div>
         </div>
+
     </section>
 
-    <section id="ipaTranslations" class="bg-dark" style="padding: 0%">
+    <section id="ipaTranslations" class="bg-dark" style="padding: 0%;overflow:hidden">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mx-auto" style="padding: 50px 0">
+                <div class="col-lg-4" style="padding: 50px 0">
                     <div class="row" class="rounded" style="padding: 5px 0">
                         <img height="100" width="300" src="images/trans1.png">
                     </div>
@@ -99,7 +101,7 @@
                         <img height="100" width="300" src="images/trans3.png">
                     </div>
                 </div>
-                <div class="col-lg-8 mx-auto" style="padding: 150px 0">
+                <div class="col" style="padding: 150px 0">
                     <h2 class="text-light">IPA Translations</h2>
                     <p class="lead text-light">Along with the audio guides, Operapedia also includes original
                         native
@@ -107,16 +109,17 @@
                         along with the International
                         Phonetic Alphabet (IPA) translation for each line. Opera singers foreign to
                         the native
-                        language of the aria can easily pick up an understanding of the correct pronunciation of the
+                        language of the aria can easily pick up an understanding of the correct pronunciation of
+                        the
                         aria through
                         the IPA translation.</p>
                 </div>
-
             </div>
+
         </div>
     </section>
 
-    <section id="store" style=" background-color: #fcbf7c; padding: 0px">
+    <section id="store" style=" background-color: #fcbf7c; padding: 0;overflow:hidden">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto" style="padding: 150px 0">
@@ -130,74 +133,84 @@
                         where you are.</p>
                 </div>
                 <div class="col-lg-4 mx-auto" style="padding: 0% 0 0 40px">
-                    <img height="500" src="images/store.png">
+                    <img src="images/store.png" height=500 />
                 </div>
             </div>
         </div>
+
     </section>
 
-    <section id="lightdark" style="padding: 0%">
+    <section id="lightdark" style="padding: 0;overflow:hidden">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mx-auto" style="padding: 30px 0 0 0">
-                    <div class="" id="toggleFrame">
+                <div class="col-lg-4" style="padding: 30px 0 0 0">
+                    <div id="toggleFrame">
                         <img class="phoneFrame" src="images/dark1.png" id="f4D1">
                         <img class="phoneFrame" src="images/light1.png" id="f4D2">
                     </div>
                 </div>
-                <div class="col-lg-8 mx-auto" style="padding: 150px 0">
+                <div class="col-lg-8" style="padding: 150px 0">
                     <h2>Light Dark Theme</h2>
-                    <p class="lead">To make things easier to read while waiting in the wings, or while under the sun,
+                    <p class="lead">To make things easier to read while waiting in the wings, or while under the
+                        sun,
                         change Operapedia's theme from light to dark at the press of a button.</p>
                     <input type="button" id="themebtn" value="Change Theme" class="btn btn-warning" onclick="divColor('toggleFrame')" />
                 </div>
             </div>
         </div>
     </section>
-    <section id="video" style="padding: 0 400px; background-color: #fcbf7c">
+
+    <section id="video" style="padding: 0 400px; background-color: #fcbf7c;overflow:hidden">
         <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/-1jKBcxRp94"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
     </section>
-    <section id="contact" class="bg-dark text-light" style="padding: 50px 0">
+
+    <section id="contact" class="bg-dark text-light" style="padding: 50px 0;overflow:hidden">
         <div class="bodyDiv" id="callTo">
-            <div class="row" style="padding: 30px 0 60px 0">
-                <div class="col-lg-12 col-lg-offset-6 text-center">
-                    <h4 style="padding-bottom: 20px">Keep Updated!</h4>
+
+            <div class="col-lg-12 col-lg-offset-6 text-center">
+                <h4 style="padding-bottom: 20px">Keep Updated!</h4>
 
 
 
 
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//twitter.com/StilioTeam?lang=en%22%3E"
-                        class="socialBtn bouncy" id="fb">Facebook</a>
-                    <a href="https://twitter.com/home?status=Just%20saw%20what%20%40stilioteam%20is%20working%20on.%20Funky%20stuff.%20Really%20excited%20for%20what%20they%20produce%20in%20the%20future."
-                        class="socialBtn bouncy" id="twt" style="animation-delay:0.07s">Twitter</a>
-                    <a href="https://plus.google.com/share?url=https%3A//twitter.com/StilioTeam?lang=en%22%3E" class="socialBtn bouncy"
-                        id="lkIn" style="animation-delay:0.14s">Google+</a>
-                </div>
-
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//twitter.com/StilioTeam?lang=en%22%3E"
+                    class="socialBtn bouncy" id="fb">Facebook</a>
+                <a href="https://twitter.com/home?status=Just%20saw%20what%20%40stilioteam%20is%20working%20on.%20Funky%20stuff.%20Really%20excited%20for%20what%20they%20produce%20in%20the%20future."
+                    class="socialBtn bouncy" id="twt" style="animation-delay:0.07s">Twitter</a>
+                <a href="https://plus.google.com/share?url=https%3A//twitter.com/StilioTeam?lang=en%22%3E" class="socialBtn bouncy"
+                    id="lkIn" style="animation-delay:0.14s">Google+</a>
             </div>
+
         </div>
 
-        <div class="container offset-4">
+    </section>
+
+    <section id="contact" class="bg-dark text-light" style="padding: 2% 30%;overflow:hidden">
+
+
+        <div class="container-fluid">
+
+
             <div class="row">
-                <div class="col-md-6 text-center" style="padding: 0px 0 20px 0">
+                <div class="col text-center" style="padding: 0px 0 20px 0">
                     <h4><label for="register_form">Register your interest!</label></h4>
                 </div>
             </div>
             <form role="form" id="register_form">
                 <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-3 col-form-label"> Enter your email address</label>
-                    <div class="col-sm-3">
+                    <label for="inputEmail" class="col col-form-label"> Enter your email address</label>
+                    <div class="col">
                         <input type="email" class="form-control" id="email" placeholder="Email" data-error="Invalid email address"
                             required>
                     </div>
                 </div>
                 <fieldset class="form-group">
                     <div class="row">
-                        <legend class="col-form-label col-sm-3 pt-0"> Are you a student?</legend>
-                        <div class="col-sm-7">
+                        <legend class="col-form-label col pt-0"> Are you a student?</legend>
+                        <div class="col">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="studentRadio" id="studentRadio1"
                                     value="Yes" required>
@@ -217,8 +230,8 @@
                 </fieldset>
                 <fieldset class="form-group">
                     <div class="row">
-                        <legend class="col-form-label col-sm-3 pt-0"> Are you a professional singer or teacher?</legend>
-                        <div class="col-sm-7">
+                        <legend class="col-form-label col pt-0"> Are you a professional singer or teacher?</legend>
+                        <div class="col">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="singerRadio" id="singerRadio1" value="Yes"
                                     required>
@@ -238,9 +251,9 @@
                 </fieldset>
                 <fieldset class="form-group">
                     <div class="row">
-                        <legend class="col-form-label col-sm-3 pt-0"> Choose your age group</legend>
-                        <div class="col-sm-6">
-                            <select class="form-control col-sm-3" id="ageGroup" required>
+                        <legend class="col-form-label col pt-0"> Choose your age group</legend>
+                        <div class="col">
+                            <select class="form-control col" id="ageGroup" required>
                                 <option>15-25</option>
                                 <option>26-35</option>
                                 <option>36-45</option>
@@ -252,9 +265,9 @@
                     </div>
                 </fieldset>
                 <div class="row justify-content-center">
-                    <div class="col-md-6" style="padding-top: 20px">
-                        <button type="submit" id="form-submit" class="btn btn-warning btn-1g">Register</button>
-                    </div>
+
+                    <button type="submit" id="form-submit" class="btn btn-warning btn-1g">Register</button>
+
                 </div>
             </form>
             <div class="row justify-content-center">
@@ -266,8 +279,9 @@
         </div>
 
     </section>
+    </div>
 
-    <footer class="py-5" style=" background-color: #000000;">
+    <footer class="page-footer" style=" background-color: #000000;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-lg-offset-6 text-center">

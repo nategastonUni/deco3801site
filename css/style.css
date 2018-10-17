@@ -1,296 +1,177 @@
-body {
-	margin: 0;
-	padding: 0;
+a.socialBtn {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
 }
 
-#nav {
-	height: 150px;
-	display: block;
-	position: fixed;
-	width: 100%;
-	z-index: 99998;
-	transition: all ease 1.9s;
-	background: transparent;
+a.socialBtn:hover {
+  color: #000000;
+  background-color: #ffffff;
 }
 
-#logo {
-	color: #CFCCCE;
-	padding: 20px;
-	transition: all ease 1.5s;
-	
-
+@media all and (max-width: 30em) {
+  a.socialBtn {
+    display: block;
+    margin: 0.4em auto;
+  }
 }
 
-.logo{
-	max-height: 80px;
-	margin-top: -10px;
+@media (max-width: 991.98px) {
+  section img {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  section {
+    padding: 0 20% !important;
+  }
+
+  .jumbotron {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    float: left;
+  }
+
+  #contact {
+    padding: 2% 5% !important;
+  }
+
+  .col-lg-8 {
+    padding: 0 !important;
+  }
+
+  .col-lg-4 {
+    padding: 0 !important;
+  }
+
+  .container {
+    padding: 10% 0 !important;
+  }
+
+  .row {
+    padding: 0 !important;
+  }
+
+  .col {
+    padding: 0 !important;
+  }
+
+  #lightdark input {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
 }
 
-#nav.shrink {
-	height: 100px;
-	transition: all ease 1.5s;
-	background: #252325;
+.navbar-toggler {
+  visibility: hidden;
 }
 
-
-
-ul {
-	margin: 20px;
-	padding: 0px;
-	overflow: auto;
-	background-color: transparent;
-	display: inline-block;
-	position: relative;
-	z-index: 99999;
-	color: #252325;
-	top: -100px;
-	left: 70%;
-
+.center {
+  margin: 0 auto;
+  width: 80%;
 }
 
-li {
-	float: left;
-
+.row {
+  width: 100%;
 }
 
-li a {
-	display: inline-block;
-	color: #CFCCCE;
-	padding: 20px;
-	text-decoration: none;
-	text-transform: uppercase;
-
+.bouncy {
+  animation: bouncy 5s infinite linear;
+  position: relative;
+}
+@keyframes bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
 }
 
-li a:hover {
-	background-color: #453734;
+#fb:hover {
+  background-color: #3b5998;
+  color: #ffffff;
 }
 
-#boximg1 {
-	height: 100vh;
-	width: 100%;
-	background-image: url(../images/Operapediabg.jpg);
-	background-size: cover;
-	background-color: black;
-	display: table;
-	background-attachment: fixed;
-	image
+#twt:hover {
+  background-color: #55acee;
+  color: #ffffff;
 }
 
-#boxtxt1 {
-	width: 100%;
-	height: 70vh;
-	text-align: center;
-	background-color: #252325;
-	background-size: cover;
-	display: table;
-	background-attachment: fixed;
-	color: #8B898B;
-	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
-	margin-top: -10px;
-	margin-bottom: 0px;
-	padding-left: 15%;
-    padding-right: 15%; 
+#lkIn:hover {
+  background-color: #dc4e41;
+  color: #ffffff;
 }
 
-#boximg2 {
-	height: 50vh;
-	width: 100%;
-	background-image: url(../images/Operapediabgsmall.jpg);
-	background-size: cover;
-	display: table;
-	background-attachment: fixed;
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
 }
 
-#boxtxt2 {
-	width: 100%;
-	height: 70vh;
-	text-align: center;
-	background-color: #252325;
-	background-size: cover;
-	display: table;
-	background-attachment: fixed;
-	color: #8B898B;
-	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
-	margin-top: -10px;
-	margin-bottom: 0px;
-	padding-left: 15%;
-    padding-right: 15%;
+.jumbotron {
+  background-image: url("../images/banner.png");
+  background-size: cover;
 }
 
-#boximg3 {
-	height: 50vh;
-	width: 100%;
-	background-image: url(../images/Operapediabgsmall.jpg);
-	background-size: cover;
-	display: table;
-	background-attachment: fixed;
+.navbar-default {
+  max-width: 100%;
+  background-color: #000000;
+  border-color: #000000;
 }
 
-#boxtxt3 {
-    padding-left: 100px;
-    padding-right: 100px;
-	width: 100%;
-	height: 70vh;
-	text-align: center;
-	background-color: #252325;
-	background-size: cover;
-	display: table;
-	background-attachment: fixed;
-	color: #8B898B;
-	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
-	margin-top: -10px;
-	margin-bottom: 0px;
-	padding-left: 15%;
-    padding-right: 15%;
+/*light-dark theme*/
+.phoneFrame {
+  border-radius: 10px;
+  max-height: 400px;
+  float: left;
+  display: block;
+}
+#f4D2 {
+  display: block;
 }
 
-#boximg4 {
-	height: 50vh;
-	width: 100%;
-	background-image: url(../images/Operapediabgsmall.jpg);
-	background-size: cover;
-	display: table;
-	background-attachment: fixed;
-}
-
-
-#boxtxt4 {
-    padding-top:50px;
-	width: 100%;
-	height: 70vh;
-	text-align: justify;
-	background-color: #252325;
-	background-size: cover;
-	display: table;
-	background-attachment: fixed;
-	color: #8B898B;
-	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
-    padding-left: 15%;
-    padding-right: 15%;
-
-}
-
-#boximg5 {
-	height: 50vh;
-	width: 100%;
-	background-image: url(../images/Operapediabgsmall.jpg);
-	background-size: cover;
-	display: table;
-	background-attachment: fixed;
+#f4D1 {
+  display: none;
 }
 
 #boxfooter {
-	padding-top: 50px;
-	padding-left: 100px;
-	padding-bottom: 50px;
-	width: 100%;
-	display: table;
-	background-attachment: fixed;
-	height: 30vh;
-	background-color: #252325;
-	color: #CFCCCE;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-bottom: 50px;
+  max-width: 100%;
+  display: table;
+  background-attachment: fixed;
+  height: 30vh;
+  background-color: #252325;
+  color: #cfccce;
 }
 
-h1 {
-	font-family: 'Roboto', sans-serif;
-	font-size: 48px;
-	font-style: bold;
-	color: #CFCCCE;
-	background-color: #252325;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	text-align: center;
-}
-
-
-
-
-
-
-a.socialBtn{
-    display:inline-block;
-    padding:0.35em 1.2em;
-    border:0.1em solid #FFFFFF;
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.12em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:#FFFFFF;
-    text-align:center;
- transition: all 0.2s;
-}
-
-a.socialBtn:hover{
-   color:#000000;
-    background-color: #FFFFFF;
-}
-
-
-@media all and (max-width:30em){
- a.socialBtn{
-  display:block;
-  margin:0.4em auto;
- }
-}
-
-
-.bouncy{
-    animation:bouncy 5s infinite linear;
-    position: relative;
-}
-@keyframes bouncy{
-    0%{top:0em}
-    40%{top:0em}
-    43%{top:-0.90em}
-    46%{top:0em}
-    48%{top:-0.4em}
-    50%{top:0em}
-    100%{top:0em;}
-
-}
-
-#fb:hover{
-    background-color: #3b5998;
-    color: #FFFFFF;
-}
-
-#twt:hover{
-    background-color: #55acee;
-    color: #FFFFFF;
-}
-
-#lkIn:hover{
-    background-color: #0077b5;
-    color: #FFFFFF;
-}
-
-
-/*light-dark theme*/
-.phoneFrame{    
-    border-radius: 25px;
-    max-height: 600px;
-    max-width: 40%;
-    margin: 10px;
-    float: left;
-    display: block;
-}
-#f4D2{
-    display:block;
-}
-
-#f4D1{
-    display:none;
-}
-
-/*end light dark theme*/
-
-.boxclass{
-    
+#operaPedia h1 {
+  font-size: 4rem;
 }
